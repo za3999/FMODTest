@@ -6,12 +6,9 @@ import org.fmod.FMOD;
 
 public class FModUtil {
 
-
-    private Context mContext;
     private static FModUtil ins;
 
     public FModUtil(Context mContext) {
-        this.mContext = mContext;
         System.loadLibrary("native-lib");
         FMOD.init(mContext.getApplicationContext());
     }
@@ -27,5 +24,9 @@ public class FModUtil {
         return ins;
     }
 
-    public native void changeVoices(int model, String path);
+    public native void changeVoices(int model, String path, CallBack callBack);
+
+    interface CallBack {
+        void onFinish();
+    }
 }

@@ -5,8 +5,8 @@
 
 #ifndef FMODTEST_NATIVE_H
 #define FMODTEST_NATIVE_H
+
 #endif
-extern "C" JNIEXPORT void JNICALL Java_com_test_fmodtest_FModUtil_changeVoices
-        (JNIEnv *, jobject, jint, jstring);
+extern "C" JNIEXPORT void JNICALL Java_com_test_fmodtest_FModUtil_changeVoices (JNIEnv *, jobject, jint, jstring,jobject);
 
 
