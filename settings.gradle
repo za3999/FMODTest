@@ -1,2 +1,3 @@
+include ':dynamicMethod'
 include ':app'
 rootProject.name = "FMODTest"
