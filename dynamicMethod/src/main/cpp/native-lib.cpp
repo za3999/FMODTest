@@ -18,7 +18,7 @@ jint JNI_OnLoad(JavaVM *vm, void *reserved) {
         return -1;
     }
     jclass clazz = env->FindClass("com/test/dynamicmethod/TestUtil");
-    env->RegisterNatives(clazz, methods, 1);
+    env->RegisterNatives(clazz, methods, sizeof(methods) / sizeof(JNINativeMethod));
     return JNI_VERSION_1_6;
 }
 
